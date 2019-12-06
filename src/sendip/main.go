@@ -6,6 +6,7 @@ import (
 	"net"
 	"os"
 	"sendip/config"
+	//"sendip/service/mqtt"
 	"sendip/service/telegram"
 
 	"github.com/chyeh/pubip"
@@ -13,6 +14,7 @@ import (
 
 func init() {
 	telegram.Init()
+	//mqtt.Init()
 }
 
 func main() {
