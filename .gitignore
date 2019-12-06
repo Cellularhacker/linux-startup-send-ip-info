@@ -10,3 +10,23 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+
+# Dependency directories (remove the comment below to include it)
+vendor/
+src/github.com/
+
+src/gopkg.in
+src/github.com
+src/golang.org
+/src/gopkg.in
+/src/github.com
+/src/github.com/
+/src/golang.org/
+.idea/
+/.idea/
+/pkg
+pkg/
+bin/
+/bin/
+
