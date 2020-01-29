@@ -1,0 +1,24 @@
+###############################
+##### Service Add Example #####
+###############################
+# Save this file with '/etc/systemd/system/senip.service'
+# Then Fix All 'Environment' to your conditions
+# Second enter following commands...
+#sudo systemctl daemon-reload
+#sudo systemctl enable sendip
+# DONE!
+# Whenever you change Environment or any character in '/etc/systemd/system/sendip.service', you have to run 'sudo systemctl daemon-reload' to reflect changes.
+[Unit]
+Description=Send IP Service
+After=network.target
+Documentation=https://github.com/cellularhcker/send_ip.git
+
+[Service]
+Environment=SENDIP_TELEGRAM_TOKEN='YOUR_TELEGRAM_BOT_API_TOKEN'
+Environment=SEND_IP_TELEGRAM_CHATID='YOUR_TELEGRAM_CHAT_ID_TO_NOTICE'
+ExecStart=/home/utils/sendip_arm
+User=utils
+Group=utils
+
+[Install]
+WantedBy=multi-user.target
