@@ -14,6 +14,7 @@ After=network.target
 Documentation=https://github.com/cellularhcker/send_ip.git
 
 [Service]
+Environment=SENDIP_MODE='Production' # <- Don't touch it.
 Environment=SENDIP_TELEGRAM_TOKEN='YOUR_TELEGRAM_BOT_API_TOKEN'
 Environment=SEND_IP_TELEGRAM_CHATID='YOUR_TELEGRAM_CHAT_ID_TO_NOTICE'
 ExecStart=/home/utils/sendip_arm
