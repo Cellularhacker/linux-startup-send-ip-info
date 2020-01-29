@@ -7,5 +7,5 @@ GOOS=linux GOARCH=arm64 go build -v sendip
 mv "sendip" "sendip_arm64"
 GOOS=linux GOARCH=386 go build -v sendip
 mv "sendip" "sendip_386"
-GOOS=linux GOARCH=amd64p32 go build -v sendip
-mv "sendip" "sendip_amd64p32"
+GOOS=darwin GOARCH=amd64 go build -v sendip
+mv "sendip" "sendip_darwin"

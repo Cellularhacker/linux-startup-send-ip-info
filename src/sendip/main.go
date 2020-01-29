@@ -23,14 +23,12 @@ func main() {
 	pubips, _ := pubip.Get()
 	pubIP := pubips.String()
 	telegram.SendMessage(fmt.Sprintf("Server started successfully\nHostname:%s\nLocal IP:%s\nPublic IP:%s\nID:%s\n", hostname, localIP, pubIP, config.MqttClientID))
-
-	return
 }
 
 func GetOutboundIP() net.IP {
 	conn, err := net.Dial("udp", "8.8.8.8:80")
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("[Error/GetOutboundIP()]", err)
 	}
 	defer conn.Close()
 	localAddr := conn.LocalAddr().(*net.UDPAddr)
